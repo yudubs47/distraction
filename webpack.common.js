@@ -51,7 +51,10 @@ module.exports = {
       template: './index.html',
       favicon: './src/assets/img/icon.png',
     }),
-    new MiniCssExtractPlugin({filename: '[name].[contenthash].css'}),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+      chunkFilename: "[id].[contenthash].css",
+    }),
   ],
   optimization: {
     // runtimeChunk: 'single', // ?? 含义不明
