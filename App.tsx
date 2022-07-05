@@ -1,8 +1,8 @@
 import React from 'react'
-import Main from './src/pages/main'
-import About from './src/pages/about'
-import './src/pages/other'
-import imgUrl from './src/assets/img/icon.png'
+import Main from '@/pages/main'
+import About from '@/pages/about'
+import '@/pages/other'
+import imgUrl from '@/assets/img/icon.png'
 export default () => {
   return (
     <div className='front'>
