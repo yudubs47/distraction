@@ -1,15 +1,22 @@
 import React from 'react'
-import Main from '@/pages/main'
-import About from '@/pages/about'
-import '@/pages/other'
-import imgUrl from '@/assets/img/icon.png'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import routers from './routers'
+
 export default () => {
   return (
-    <div className='front'>
-      这是一行字哈哈哈哈
-      <img src={imgUrl} alt="" />
-      <Main />
-      <About />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {
+          routers.map(({ path, Component, isIndex }) => (
+            <Route key={path} index={isIndex} path={path} element={<Component />} />
+          ))
+        }
+      </Routes>
+    </BrowserRouter>
   )
 }
