@@ -75,7 +75,7 @@ module.exports = {
     }),
   ],
   optimization: {
-    // runtimeChunk: 'single', // ?? 含义不明
+    runtimeChunk: 'single', // webpack运行时代码 // 例如模块管理等等
     moduleIds: 'deterministic', // 确保vendors hash 不会随src下的文件变更?
     splitChunks: {
       cacheGroups: {
