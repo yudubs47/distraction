@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Button } from 'antd'
 import Nav from '@/components/Nav'
 import getDateTime from '@/util/getDateTime'
 import styles from './index.less'
@@ -10,6 +11,7 @@ export default () => {
       <Nav />
       <div className={`test ${styles.main} `} onClick={() => setDate(getDateTime())}>
         main日期时间: {day}
+        <Button type='primary'>do nothing</Button>
       </div>
     </>
   )
