@@ -10,7 +10,7 @@
     "start": "webpack serve --config webpack.dev.js",
     "dev": "webpack serve --config webpack.dev.js"
   },
-  "author": "",
+  "author": "yzl <yu_dub@163.com>",
   "license": "ISC",
   "devDependencies": {
     "@types/react": "^18.0.14",
@@ -36,5 +36,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0"
-  }
+  },
+  "repository": "git@github.com:yudubs47/distraction.git",
+  "packageManager": "yarn@3.2.3"
 }
