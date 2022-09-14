@@ -6,9 +6,10 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
   entry: './index.tsx',
   output: {
-    filename: './js/[name].[contenthash].js',
+    filename: 'js/[name].[contenthash].js',
+    publicPath: '/',
     path: path.resolve(__dirname, 'dist'),
-    chunkFilename: './js/[id].[contenthash].js',
+    chunkFilename: 'js/[id].[contenthash].js',
     clean: true,
     assetModuleFilename: (pathData) => {
       // assets资源规则待补充
@@ -57,16 +58,10 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
-        // generator: {
-        //   outputPath: 'img',
-        // },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
-        // generator: {
-        //   outputPath: 'font',
-        // },
       },
     ],
   },
@@ -74,11 +69,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: 'body',
       template: './index.html',
-      favicon: './src/assets/img/icon.png',
+      favicon: 'src/assets/img/icon.png',
     }),
     new MiniCssExtractPlugin({
-      filename: './styles/[name].[contenthash].css',
-      chunkFilename: './styles/[id].[contenthash].css',
+      filename: 'styles/[name].[contenthash].css',
+      chunkFilename: 'styles/[id].[contenthash].css',
     }),
   ],
   optimization: {
